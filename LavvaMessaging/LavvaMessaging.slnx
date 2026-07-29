@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="LavvaMessaging.Api/LavvaMessaging.Api.csproj" />
+  <Project Path="LavvaMessaging.Application/LavvaMessaging.Application.csproj" />
+  <Project Path="LavvaMessaging.Domain/LavvaMessaging.Domain.csproj" />
+  <Project Path="LavvaMessaging.Infrastructure/LavvaMessaging.Infrastructure.csproj" />
+</Solution>

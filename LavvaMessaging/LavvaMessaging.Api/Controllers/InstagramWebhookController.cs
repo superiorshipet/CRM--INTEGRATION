@@ -10,17 +10,17 @@ using System.Text.Json;
 namespace LavvaMessaging.Api.Controllers;
 
 [ApiController]
-[Route("api/webhooks/whatsapp")]
-public class WhatsAppWebhookController : ControllerBase
+[Route("api/webhooks/instagram")]
+public class InstagramWebhookController : ControllerBase
 {
     private readonly IMediator _mediator;
     private readonly IWebhookVerifier _verifier;
-    private readonly ILogger<WhatsAppWebhookController> _logger;
+    private readonly ILogger<InstagramWebhookController> _logger;
 
-    public WhatsAppWebhookController(
+    public InstagramWebhookController(
         IMediator mediator,
         IWebhookVerifier verifier,
-        ILogger<WhatsAppWebhookController> logger)
+        ILogger<InstagramWebhookController> logger)
     {
         _mediator = mediator;
         _verifier = verifier;
@@ -62,7 +62,7 @@ public class WhatsAppWebhookController : ControllerBase
         {
             var dto = new IncomingMessageDto
             {
-                Channel = MessageChannel.WhatsApp,
+                Channel = MessageChannel.Instagram,
                 CustomerExternalId = result.From,
                 CustomerDisplayName = result.Contact?.Name,
                 ExternalMessageId = result.MessageId,
